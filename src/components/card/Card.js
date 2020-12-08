@@ -22,7 +22,7 @@ export const Card = () => {
     return (
       <>
         {isLoading ? <Loading /> : null}
-        <Wrapper loading={isLoading}>
+        <Wrapper visible={isLoading}>
           <button onClick={handleClick}>Go back</button>
           <Img>
             <img
@@ -47,7 +47,7 @@ export const Card = () => {
 }
 
 const Wrapper = styled.div`
-  display: ${props => (props.loading ? 'none' : 'block')};
+  display: ${props => (props.visible ? 'none' : 'block')};
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
   & p {

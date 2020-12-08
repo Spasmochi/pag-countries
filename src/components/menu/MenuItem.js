@@ -14,6 +14,7 @@ export const MenuItem = ({ Label }) => {
   return (
     <Item onClick={handleClick}>
       <p>{Label}</p>
+      <p>✈</p>
     </Item>
   )
 }
