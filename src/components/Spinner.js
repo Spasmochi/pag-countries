@@ -1,0 +1,34 @@
+import React from 'react'
+import styled from 'styled-components'
+
+export const Spinner = () => {
+  return <StyledSpinner />
+}
+
+const StyledSpinner = styled.div`
+  padding: 50px;
+  position: relative;
+  text-align: center;
+  &:before {
+    content: '';
+    height: 30px;
+    width: 30px;
+    margin: -15px auto auto -15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-width: 8px;
+    border-style: solid;
+    border-color: #2180c0 #ccc #ccc;
+    border-radius: 100%;
+    animation: rotation 0.7s infinite linear;
+  }
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+`
